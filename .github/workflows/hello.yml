@@ -1,0 +1,33 @@
+name: Test projektu
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        run: |
+          echo "GitHub Actions działa dla student08"
+          python3 --version
+EOFcd ~/github-student08
+mkdir -p .github/workflows
+cat << 'EOF' > .github/workflows/hello.yml
+name: Test projektu
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        run: |
+          echo "GitHub Actions działa dla student08"
+          python3 --version
